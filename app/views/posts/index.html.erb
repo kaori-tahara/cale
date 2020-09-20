@@ -1,0 +1,10 @@
+<%= link_to '予定を書く', new_post_path %>
+
+ <%=month_calendar events: @posts do |date, posts|%>
+   <%= date.day %> 
+  <% posts.each do |post| %>
+    <div>
+      <%=  link_to post.title %>
+    </div>
+  <% end %>
+<% end %>
