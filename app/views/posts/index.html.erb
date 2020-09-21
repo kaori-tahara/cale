@@ -1,10 +1,11 @@
-<%= link_to '予定を書く', new_post_path %>
+<%= link_to '予定を書く', new_user_path %>
 
- <%=month_calendar events: @posts do |date, posts|%>
+ <%=month_calendar events: @users do |date, users|%>
    <%= date.day %> 
-  <% posts.each do |post| %>
+  <% users.each do |user| %>
     <div>
-      <%=  link_to post.title %>
+      <%=  link_to user.title %>
     </div>
   <% end %>
 <% end %>
+
