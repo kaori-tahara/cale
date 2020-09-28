@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
     @users = User.all
+    @jobs = Job.all
   
   end
 
@@ -14,10 +15,4 @@ class PostsController < ApplicationController
   end
 
 
-    private
-
-    def post_params
-      params.require(:post).permit(:title, :content,:vlog_day)
-    end
-
-end
+   end
